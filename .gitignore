@@ -31,3 +31,44 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Compiled output
+price-list-displayer/dist
+price-list-displayer/tmp
+price-list-displayer/out-tsc
+price-list-displayer/bazel-out
+
+# Node
+price-list-displayer/node_modules
+price-list-displayer/npm-debug.log
+price-list-displayer/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+price-list-displayer/.vscode/*
+price-list-displayer/!.vscode/settings.json
+price-list-displayer/!.vscode/tasks.json
+price-list-displayer/!.vscode/launch.json
+price-list-displayer/!.vscode/extensions.json
+price-list-displayer/.history/*
+
+# Miscellaneous
+price-list-displayer/.angular/cache
+price-list-displayer/.sass-cache/
+price-list-displayer/connect.lock
+price-list-displayer/coverage
+price-list-displayer/libpeerconnection.log
+price-list-displayer/testem.log
+price-list-displayer/typings
+
+# System files
+price-list-displayer/.DS_Store
+price-list-displayer/Thumbs.db

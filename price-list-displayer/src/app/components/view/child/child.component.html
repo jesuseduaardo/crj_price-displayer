@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <h5 *ngIf="view.elements.length > 1" class="card-title view_title">{{getViewTitle()}}</h5>
+    <div class="row" *ngIf="view.elements.length > 1">
+      <div class="col-4" *ngFor="let item of view.elements">
+        <app-product [product]="item" class="m-2"></app-product>
+      </div>
+    </div>
+    <div class="row" *ngIf="view.elements.length === 1">
+      <div class="col-12" *ngFor="let item of view.elements">
+        <app-product [product]="item" [isOneProduct]="view.elements.length === 1" class="m-2"></app-product>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-footer">
+    2 days ago
+  </div>
+</div>

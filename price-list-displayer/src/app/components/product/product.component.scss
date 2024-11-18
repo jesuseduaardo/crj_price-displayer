@@ -1,0 +1,97 @@
+@use "sass:math";
+
+$font-size: 2rem;
+
+mat-card {
+  margin: 0.5rem 0.25rem;
+  background-color: rgb(255 255 255 / 0%);
+  border-color: #dfdfdf;
+  min-height: 18rem;
+  position: relative;
+  text-shadow: 0px -2px 1px #ffffff, -2px 0px 1px #ffffff, 0px 2px 1px #ffffff,
+    2px 0px 1px #ffffff, -2px -2px 1px #ffffff, -2px 2px 1px #ffffff,
+    2px -2px 1px #ffffff, 2px 2px 1px #ffffff;
+
+  mat-card-header {
+    flex-flow: column;
+    z-index: 1;
+    mat-card-title {
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height:math.div($font-size,1.25);
+      font-size: math.div($font-size,1.25);
+      text-align: center;
+      letter-spacing: 0.1rem;
+    }
+  }
+  mat-card-content {
+    min-height: 12rem;
+    padding: 0 !important;
+    .product {
+      &_image {
+        min-height: 12rem;
+        min-width: 8rem;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+    .only-image {
+      min-height: 17rem;
+    }
+    mat-card-footer {
+      z-index: 1;
+      display: block;
+      min-height: 2.25rem;
+      width: 100%;
+      position: absolute;
+      bottom: -0.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      h5 {
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+.unique {
+  border: 0;
+  background-color: rgb(255 255 255 / 0%);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75vh;
+  mat-card-header {
+    flex-flow: column;
+    z-index: 1;
+    mat-card-title {
+      text-transform: uppercase;
+      height: 0em;
+      font-size: 4em;
+      line-height: 0.75em;
+      text-align: center;
+    }
+  }
+  .product {
+    &_image {
+      height: 60vh;
+      width: 85vw;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+  mat-card-footer {
+    z-index: 1;
+    h5 {
+      margin: 0;
+      text-align: center;
+      font-size: $font-size;
+    }
+  }
+}

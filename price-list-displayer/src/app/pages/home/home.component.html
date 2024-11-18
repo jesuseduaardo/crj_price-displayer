@@ -1,0 +1,11 @@
+<div class="container-fluid p-2">
+  <ngb-carousel
+    [interval]="slideInterval"
+    [pauseOnHover]="false"
+    [pauseOnFocus]="false"
+    [showNavigationIndicators]="false"
+    (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let view of views; let i = index">
+      <app-view [@slideInOut]="i === activeId ? 'enter' : 'leave'" [view]="view"></app-view>
+    </ng-template>
+  </ngb-carousel>

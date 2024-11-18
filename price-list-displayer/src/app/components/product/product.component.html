@@ -1,0 +1,12 @@
+<mat-card appearance="outlined" [ngClass]="{'unique': isOneProduct}">
+  <mat-card-header *ngIf="existProductName()">
+    <mat-card-title>{{getProductName()}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="product_image" [ngClass]="{'only-image': !existProductName() }"
+      [ngStyle]="{'background-image': getProductImage()}"></div>
+    <mat-card-footer *ngIf="existProductPrice()">
+      <h5>{{getProductPrice()}}</h5>
+    </mat-card-footer>
+  </mat-card-content>
+</mat-card>

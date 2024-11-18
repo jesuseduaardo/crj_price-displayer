@@ -1,0 +1,22 @@
+<div class="card view">
+  <div class="card-body">
+    <h5 *ngIf="getViewTitle().length" class="card-title view_title">{{getViewTitle()}}</h5>
+    <div *ngIf="view.elements.length">
+      <div *ngIf="view.elements.length > 1; else elseBlock" class="row">
+        <div [ngClass]="col" *ngFor="let item of view.elements">
+          <app-product [product]="item"></app-product>
+        </div>
+      </div>
+      <ng-template #elseBlock class="row">
+        <div class="col-12" *ngFor="let item of view.elements">
+          <app-product [product]="item" [isOneProduct]="view.elements.length === 1"></app-product>
+        </div>
+      </ng-template>
+    </div>
+    <div *ngIf="view.childViews.length" class="row">
+      <div class="col-6" *ngFor="let item of view.childViews">
+        <app-child [view]="item"></app-child>
+      </div>
+    </div>
+  </div>
+</div>

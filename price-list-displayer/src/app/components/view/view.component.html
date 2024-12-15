@@ -3,7 +3,7 @@
     <h5 *ngIf="getViewTitle().length" class="card-title view_title">{{getViewTitle()}}</h5>
     <div *ngIf="view.elements.length">
       <div *ngIf="view.elements.length > 1; else elseBlock" class="row">
-        <div [ngClass]="col" *ngFor="let item of view.elements">
+        <div class="col-3" *ngFor="let item of view.elements">
           <app-product [product]="item"></app-product>
         </div>
       </div>
